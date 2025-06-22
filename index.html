@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="welcomeMessage">Welcome to the Todo List Application!</div>
+    <div id="app" style="display: none;">
+        <h1><img src="https://img.icons8.com/ios-filled/50/000000/todo-list.png" alt="Todo List Logo"> Todo List</h1>
+        <table id="todoTable">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Due Date</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="todoList"></tbody>
+        </table>
+        <h2><img src="https://img.icons8.com/ios-filled/50/000000/checklist.png" alt="Progress Logo"> Today's Progress</h2>
+        <ul id="progressList"></ul>
+        <button id="addTaskButton" onclick="showAddTaskForm()">Add New Task</button>
+        <div id="addTaskForm" style="display: none;">
+            <h2>Add New Task</h2>
+            <input type="text" id="taskInput" placeholder="New Task">
+            <textarea id="descriptionInput" placeholder="Description"></textarea>
+            <input type="text" id="categoryInput" placeholder="Category">
+            <input type="date" id="dueDateInput">
+            <select id="priorityInput">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <button onclick="addTodo()">Add</button>
+            <button onclick="hideAddTaskForm()">Cancel</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
